@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Users</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f6fa;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        #container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 15px;
+            border-radius: 12px;
+            text-align: center;
+            cursor: pointer;
+            transition: 0.3s;
+            box-shadow: 0px 2px 6px rgba(0,0,0,0.1);
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 4px 12px rgba(0,0,0,0.2);
+        }
+
+        .card img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        /* Details Page */
+        #detailsSection {
+            display: none;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        #detailsCard {
+            width: 350px;
+            margin: auto;
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0px 4px 12px rgba(0,0,0,0.2);
+        }
+
+        #detailsCard img {
+            width: 150px;
+            border-radius: 50%;
+        }
+
+        #backBtn {
+            padding: 8px 15px;
+            margin-top: 15px;
+            border: none;
+            background: #333;
+            color: white;
+            cursor: pointer;
+            border-radius: 8px;
+        }
+
+        #backBtn:hover {
+            background: #555;
+        }
+
+    </style>
+</head>
+<body>
+
+<h1>GitHub Users</h1>
+
+<!-- List of Users -->
+<div id="container"></div>
+
+<!-- Details Section -->
+<div id="detailsSection">
+    <div id="detailsCard">
+        <img id="avatar">
+        <h2 id="name"></h2>
+        <h3 id="login"></h3>
+        <p id="type"></p>
+        <p id="url"></p>
+        <p id="repos"></p>
+        <p id="followers"></p>
+        <p id="following"></p>
+
+        <button id="backBtn">⬅ Back</button>
+    </div>
+</div>
+
+<script src="./api.js"></script>
+</body>
+</html>
